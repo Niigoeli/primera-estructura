@@ -76,10 +76,20 @@ const products = [
     </div>
     <div class="bg-[#191919] flex justify-center items-center">
       <div
-        class="text-white flex items-center border-[1px] rounded-full px-2 py-1 mb-3"
-      >
+        class="text-white flex items-center border-[1px] relative rounded-full py-1 mb-3">
+        
         <div class="mx-3"><Icon name="mdi:text" /></div>
-        <div class="text-[18px]">Todas las categorias</div>
+        <a class="text-[18px] group " href="">Todas las categorias 
+        <menu class="hidden group-hover:block w-full left-0 top-0 absolute bg-white rounded-t-xl rounded-b-xl text-black"> 
+          <div class="text-[18px] text-center text-black rounded-full flex items-center justify-evenly pb-1 mt-1 font-semibold"><Icon name="mdi:text" /> Todas las categorias <Icon name="mdi:chevron-down" /> </div>
+          <ul>
+            <li class="ml-6 text-md p-1">Hogar y jardin</li>
+            <li class="ml-6 text-md p-1">Cabello y pelucas</li>
+            <li class="ml-6 text-md p-1">Moda hombre</li>
+          </ul>
+        </menu>
+      </a>
+
         <div class="text-white mx-3"><Icon name="mdi:chevron-down" /></div>
       </div>
       <div class="text-[#FD384F] mx-4 mb-3">
