@@ -26,7 +26,7 @@ const products = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="grid">
     <div class="bg-[#191919] flex justify-center">
       <div class="container flex items-center ml-40 p-3">
         <img src="/aliexpres.webp" class="h-[61px] mr-7" />
@@ -76,19 +76,28 @@ const products = [
     </div>
     <div class="bg-[#191919] flex justify-center items-center">
       <div
-        class="text-white flex items-center border-[1px] relative rounded-full py-1 mb-3">
-        
+        class="text-white flex items-center border-[1px] relative rounded-full py-1 mb-3"
+      >
         <div class="mx-3"><Icon name="mdi:text" /></div>
-        <a class="text-[18px] group " href="">Todas las categorias 
-        <menu class="hidden group-hover:block w-full left-0 top-0 absolute bg-white rounded-t-xl rounded-b-xl text-black"> 
-          <div class="text-[18px] text-center text-black rounded-full flex items-center justify-evenly pb-1 mt-1 font-semibold"><Icon name="mdi:text" /> Todas las categorias <Icon name="mdi:chevron-down" /> </div>
-          <ul>
-            <li class="ml-6 text-md p-1">Hogar y jardin</li>
-            <li class="ml-6 text-md p-1">Cabello y pelucas</li>
-            <li class="ml-6 text-md p-1">Moda hombre</li>
-          </ul>
-        </menu>
-      </a>
+        <a class="text-[18px] group" href=""
+          >Todas las categorias
+          <menu
+            class="hidden group-hover:block w-full left-0 top-0 absolute bg-white rounded-t-xl rounded-b-xl text-black"
+          >
+            <div
+              class="text-[18px] text-center text-black rounded-full flex items-center justify-evenly pb-1 mt-1 font-semibold"
+            >
+              <Icon name="mdi:text" /> Todas las categorias <Icon
+                name="mdi:chevron-down"
+              />
+            </div>
+            <ul>
+              <li class="ml-6 text-md p-1">Hogar y jardin</li>
+              <li class="ml-6 text-md p-1">Cabello y pelucas</li>
+              <li class="ml-6 text-md p-1">Moda hombre</li>
+            </ul>
+          </menu>
+        </a>
 
         <div class="text-white mx-3"><Icon name="mdi:chevron-down" /></div>
       </div>
@@ -107,7 +116,7 @@ const products = [
         Mas <div class="mt-2"><Icon name="mdi:chevron-down" /></div>
       </div>
     </div>
-    <div class="bg-[url('fondo.webp')] flex">
+    <!-- <div class="bg-[url('fondo.webp')] flex">
       <div class="ml-40 mt-10 flex flex-col">
         <p class="text-white text-2xl">
           La promo termina: 28 mar, 01:59 (GMT-5)
@@ -154,15 +163,60 @@ const products = [
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="m-auto">
+      <div class="">
+        <img src="banner.webp" alt="" class="h-28 my-5" />
+      </div>
+      <div class="flex ">
+        <div class="flex flex-col">
+          <div class="flex-col flex bg-[#F5F5F5] rounded-3xl p-8">
+            <div class="flex ">
+              <a
+                class="h-12 w-36 rounded-3xl text-center text-lg bg-black py-2 text-white px-4"
+                href="#"><b>Registrate</b></a
+              >
+              <div class="w-2"></div>
+              <a
+                class="h-12 w-36 rounded-3xl text-center text-lg  bg-white py-2  border border-black px-4"
+                href="#"><b>Entrar</b></a
+              >
+            </div>
+  
+            <div class=""><p class="text-center text-sm pt-2">O continua con</p></div>
+            <div class="flex justify-center gap-3 mt-2">
+              <div class="text-3xl"><Icon name="logos:facebook" /></div>
+              <div class="text-3xl"><Icon name="logos:google-icon" /></div>
+              <div class="text-3xl"><Icon name="logos:twitter" /></div>
+              <div class="text-3xl"><Icon name="logos:apple" /></div>
+            </div>
+            
+          </div>
+          <div class="bg-[#FFF5EF] rounded-3xl mt-3">
+            <p class="text-[#FD384F] pl-6 pt-2 text-2xl" ><b>Oferta de bienvenida</b></p>
+            <p class="pl-6 ">Tu precio exclusivo</p>
+            <div class="flex items-center justify-center gap-3">
+              <div>z</div>
+              <div class="size-56 mt-3"><img src="rosado.webp" alt=""></div>
+              <div>z</div>
+            </div>
+            <div class="flex justify-center items-end my-3">
+              <p class="text-[#FD384F] text-lg"><b>COP5,000.32</b></p>
+              <div class="w-2 "></div>
+              <p class="line-through text-[#9B9B9B]">COP42,00.33</p>
+              
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </body>
-  <div class="bg-zinc-800 flex justify-center"></div>
-  <nav class="container main_menu">
-    <a href="/">Inicio</a><a href="/productos">Productos</a>
-  </nav>
-  <div class="container product_list">
+
+  <!-- <div class="container product_list">
     {
-      products.map((product) => (
+      products.map((product) => ( 
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -180,21 +234,15 @@ const products = [
         </div>
       ))
     }
-  </div>
-  <div class="container categories">Categorias</div>
-
-  <div class="container">
-    <slot />
-  </div>
-
-  <div class="container footer">ESTE ES EL FOOTER</div>
+  </div> -->
 </html>
 
 <style is:global>
+  /*
   .main_menu {
     display: flex;
     height: 40px;
-    background-color: #ff8d22;
+    
   }
   .main_menu a {
     height: 100%;
@@ -202,10 +250,10 @@ const products = [
     padding: 0 12px;
     color: #fff;
     text-decoration: none;
-    background-color: #ff9822;
+    
   }
   .main_menu a:hover {
-    background: #ff8800e0;
+    
     transition: background 400ms ease-in-out;
   }
 
@@ -255,4 +303,5 @@ const products = [
       Courier New,
       monospace;
   }
+  */
 </style>
